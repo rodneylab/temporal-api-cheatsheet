@@ -126,3 +126,15 @@ code .line::before {
   color: var(--colour-light);
   font-family: IBM Plex Mono;
 }
+
+footer {
+  display: grid;
+  place-content: center;
+  color: var(--colour-theme);
+  margin: var(--spacing-12);
+  width: var(--max-width-full);
+}
+
+footer a {
+  color: var(--color-theme);
+}

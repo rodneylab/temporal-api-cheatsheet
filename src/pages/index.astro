@@ -6,12 +6,15 @@ import '$styles/fonts.css';
 import '$styles/global.css';
 import getResult from '$utilities/file';
 
+
 const methods = (await Astro.glob('../content/*.md')).sort((a,b)=> a.frontmatter.title.localeCompare(b.frontmatter.title));
 
 const results = await Promise.all(methods.map(({file}) => {
   const path = file.replace(/\.md/, '').split('/').at(-1);
   return getResult(path);
 }));
+
+const COPYRIGHT_ENTITY = '\u00A9'; // (c)
 
 ---
 <html lang="en">
@@ -59,6 +62,7 @@ const results = await Promise.all(methods.map(({file}) => {
       <Resources />
     </div>
   </main>
+  <footer><p>Copyright {COPYRIGHT_ENTITY} 2022 Rodney Johnson. A <a href="https://rodneylab.com">Rodney Lab</a> project.</p></footer>
   </body>
 </html>
 
