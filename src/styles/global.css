@@ -54,6 +54,9 @@ code {
   --colour-light: hsl(345 100% 99%); /* lavender blush */
   --colour-dark: hsl(105 100% 1%); /* deep fit */
 
+  --colour-brand-tint-10: #f5c055;
+  --colour-theme-shade-10: #184a4a;
+
   --colour-code-line-numbers: hsl(219 14% 71% / 0.8);
   --colour-code-line-highlight: hsl(34 96% 55%);
   --colour-code-background-hue: 220;
@@ -130,11 +133,11 @@ code .line::before {
 footer {
   display: grid;
   place-content: center;
-  color: var(--colour-theme);
+  color: var(--colour-theme-shade-10);
   margin: var(--spacing-12);
   width: var(--max-width-full);
 }
 
 footer a {
-  color: var(--color-theme);
+  color: var(--color-theme-shade-10);
 }

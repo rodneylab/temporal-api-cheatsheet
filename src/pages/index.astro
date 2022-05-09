@@ -16,12 +16,19 @@ const results = await Promise.all(methods.map(({file}) => {
 
 const COPYRIGHT_ENTITY = '\u00A9'; // (c)
 
+const metadescription ='Temporal API cheatseet: handy resource for whenever you forget the name of a Temporal method';
+
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>JavaScript Temporal API Cheatsheet</title>
+    <meta name="description" content={metadescription} />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="192x192" />
@@ -104,7 +111,8 @@ const COPYRIGHT_ENTITY = '\u00A9'; // (c)
   }
 
   .docs, .docs a {
-    color: var(--colour-brand);
+    background-color: ;
+    color: var(--colour-brand-tint-10);
     margin-bottom: var(--spacing-2);
   }
 </style>
