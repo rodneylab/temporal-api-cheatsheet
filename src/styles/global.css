@@ -51,7 +51,7 @@ code {
 }
 
 :root {
-  --colour-brand: hsl(40 89% 61%); /* saffron */
+  --colour-brand: hsl(40 89% 61%); /* saffron: #f4b942*/
   --colour-theme: hsl(214 70% 35%); /* matisse */
   --colour-alt: hsl(343 75% 57%); /* cerise red */
 
@@ -71,6 +71,13 @@ code {
       calc(var(--colour-code-background-lightness) + 5%)
   );
 
+  /* https://www.joshwcomeau.com/shadow-palette/ */
+  --shadow-color: 41deg 74% 36%;
+  --shadow-elevation-medium: -1px 1px 1.4px hsl(var(--shadow-color) / 0.51),
+    -2.7px 2.7px 3.7px -1.2px hsl(var(--shadow-color) / 0.43),
+    -7.6px 7.6px 10.5px -2.3px hsl(var(--shadow-color) / 0.36),
+    -20px 20px 27.6px -3.5px hsl(var(--shadow-color) / 0.29);
+
   --spacing-px: 1px;
   --spacing-px-2: 2px;
   --spacing-0: 0;
@@ -81,6 +88,7 @@ code {
   --spacing-6: 1.5rem;
   --spacing-8: 1.5rem;
   --spacing-12: 3rem;
+  --spacing-16: 4rem;
   --spacing-18: 4.5rem;
   --max-width-wrapper: 48rem;
   --max-width-full: 100%;
@@ -98,13 +106,6 @@ code {
   --font-weight-bold: 700;
 
   --line-height-normal: 1.5;
-
-  /* CREDIT: https://www.joshwcomeau.com/shadow-palette/ */
-  --shadow-color: 194deg 84% 18%;
-  --shadow-elevation-medium: -1px 1px 1.6px hsl(var(--shadow-color) / 0.36),
-    -3.3px 3.3px 5.3px -0.8px hsl(var(--shadow-color) / 0.36),
-    -8.2px 8.2px 13px -1.7px hsl(var(--shadow-color) / 0.36),
-    -20px 20px 31.8px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
 .astro-code {
