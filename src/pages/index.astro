@@ -17,14 +17,15 @@ const results = await Promise.all(methods.map(({file}) => {
 
 const COPYRIGHT_ENTITY = '\u00A9'; // (c)
 
-const metadescription ='Temporal API cheatseet: handy resource for whenever you forget the name of a Temporal method';
+const title = 'Temporal API Cheatsheet: Quick Guide to new JS API';
+const metadescription ='Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.';
 
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>JavaScript Temporal API Cheatsheet</title>
+    <title>{title}</title>
     <meta name="description" content={metadescription} />
     <meta
       name="robots"
