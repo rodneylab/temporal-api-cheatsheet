@@ -1,43 +1,18 @@
-# Astro Starter Kit: Minimal
+<img src="./images/rodneylab-github-temporal-api-cheatsheet.png" alt="Rodney Lab temporal-api-cheatsheet Github banner">
 
-```
-npm init astro -- --template minimal
-```
+<p align="center">
+  <a aria-label="Open Rodney Lab site" href="https://rodneylab.com" rel="nofollow noopener noreferrer">
+    <img alt="Rodney Lab logo" src="https://rodneylab.com/assets/icon.png" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Temporal API Cheatsheet
+</h1>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+# temporal-api-cheatsheet
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/rodneylab/temporal-api-cheatsheet)
 
-## 🚀 Project Structure
+Code for the Temporal API Cheatsheet. See the Rodney Lab <a aria-label="Open Rodney Lab blog post on Svelte Kit Shiki syntax highlighting" href="https://rodneylab.com/sveltekit-shiki-syntax-highlighting/">article introducing the Temporal API Cheatsheet</a> for more colour. If you have any questions, please drop a comment at the bottom of that page. Feel free to submit a pull request for missing methods which you find handy.
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-| :---------------- | :------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
+Also feel free to jump into the [Rodney Lab matrix chat room](https://matrix.to/#/%23rodney:matrix.org).
