@@ -21,6 +21,7 @@ h2 {
 body {
   margin: 0;
   font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-1);
   background-color: var(--colour-brand);
 }
 
@@ -82,6 +83,8 @@ code {
   --max-width-full: 100%;
 
   --font-size-root: 16px;
+  --font-size-1: 1rem;
+  --font-size-2: 1.25rem;
   --font-size-3: 1.563rem;
   --font-size-4: 1.953rem;
   --font-size-5: 2.441rem;
@@ -125,16 +128,22 @@ code .line::before {
   color: var(--colour-light);
 }
 
+.content-emph {
+  font-size: var(--font-size-2);
+}
+
 .example h3 {
   color: var(--colour-light);
   font-family: IBM Plex Mono;
 }
 
 footer {
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: var(--colour-theme-shade-10);
-  margin: var(--spacing-12);
+  margin: var(--spacing-12) auto;
   width: var(--max-width-full);
 }
 
