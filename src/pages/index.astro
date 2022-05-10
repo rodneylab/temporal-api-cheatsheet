@@ -1,4 +1,5 @@
 ---
+import GithubIcon from '$components/Icons/Github.astro';
 import {Content as Introduction} from '$components/introduction.md';
 import {Content as Polyfill} from '$components/polyfill.md';
 import {Content as Resources} from '$components/resources.md';
@@ -37,6 +38,12 @@ const metadescription ='Temporal API Cheatsheet: a quick guide to new JavaScript
     <link rel="mask-icon" href="/favicon.svg" />
   </head>
   <body>
+  <header>
+    <nav>
+      <a aria-label="Open Git Hub repo" href="https://github.com/rodneylab/temporal-api-cheatsheet" target="_blank" rel="nofollow noopener noreferrer"><GithubIcon />
+      </a>
+    </nav>
+  </header>
   <main class="container">
     <h1 class="heading">JavaScript Temporal API Cheatsheet</h1>
     <div class="content content-emph">
@@ -78,6 +85,21 @@ const metadescription ='Temporal API Cheatsheet: a quick guide to new JavaScript
 </html>
 
 <style>
+  header {
+    display: flex;
+    font-size: var(--font-size-5);
+    width: min(100% - var(--spacing-12), var(--max-width-wrapper));
+    margin: var(--spacing-12) auto var(--spacing-0);
+  }
+
+  header a {
+    color: var(--colour-dark);
+  }
+
+  header nav {
+    margin-left: auto;
+  }
+
   .container {
     background-color: var(--colour-brand);
     color: var(--colour-light);
