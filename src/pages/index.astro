@@ -2,6 +2,7 @@
 import {Content as Introduction} from '$components/introduction.md';
 import {Content as Polyfill} from '$components/polyfill.md';
 import {Content as Resources} from '$components/resources.md';
+import RodneyLabCredit from '$components/RodneyLabCredit.astro';
 import '$styles/fonts.css';
 import '$styles/global.css';
 import getResult from '$utilities/file';
@@ -37,13 +38,12 @@ const metadescription ='Temporal API cheatseet: handy resource for whenever you 
   <body>
   <main class="container">
     <h1 class="heading">JavaScript Temporal API Cheatsheet</h1>
-    <div class="content">
+    <div class="content content-emph">
     <Introduction />
     </div>
     <h2>Polyfill</h2>
     <div class="content">
     <Polyfill /></div>
-
     <section role="feed">
       <h2>Methods</h2>
         {methods.map(({Content, frontmatter: {docs, title}},index) => (
@@ -65,11 +65,14 @@ const metadescription ='Temporal API cheatseet: handy resource for whenever you 
         </article>))}
     </section>
     <h2>Resources</h2>
-    <div class="content">
+    <div class="content content-emph">
       <Resources />
     </div>
   </main>
-  <footer><p>Copyright {COPYRIGHT_ENTITY} 2022 Rodney Johnson. A <a href="https://rodneylab.com">Rodney Lab</a> project.</p></footer>
+  <footer>
+    <div class="copyright">Copyright {COPYRIGHT_ENTITY} 2022 Rodney Johnson. A <a href="https://rodneylab.com">Rodney Lab</a> project.</div>
+    <RodneyLabCredit />
+  </footer>
   </body>
 </html>
 
@@ -86,6 +89,7 @@ const metadescription ='Temporal API cheatseet: handy resource for whenever you 
 
   .heading {
     text-align: center;
+    margin-bottom: var(--spacing-18);
   }
 
   .content {
@@ -114,5 +118,9 @@ const metadescription ='Temporal API cheatseet: handy resource for whenever you 
     background-color: ;
     color: var(--colour-brand-tint-10);
     margin-bottom: var(--spacing-2);
+  }
+
+  .copyright {
+margin-bottom: var(--spacing-6);
   }
 </style>
