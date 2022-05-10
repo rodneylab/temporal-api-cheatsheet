@@ -25,6 +25,9 @@ body {
   background-color: var(--colour-brand);
 }
 
+li {
+  margin-bottom: var(--spacing-2);
+}
 code {
   counter-reset: step;
   counter-increment: step 0;
