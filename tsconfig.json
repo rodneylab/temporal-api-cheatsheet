@@ -13,9 +13,10 @@
     "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
-      "$content/*": ["src/content/*"],
       "$components/*": ["src/components/*"],
       "$configuration/*": ["src/configuration/*"],
+      "$constants/*": ["src/constants/*"],
+      "$content/*": ["src/content/*"],
       "$styles/*": ["src/styles/*"],
       "$utilities/*": ["src/utilities/*"]
     }
