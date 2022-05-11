@@ -4,6 +4,7 @@ import {Content as Introduction} from '$components/introduction.md';
 import {Content as Polyfill} from '$components/polyfill.md';
 import {Content as Resources} from '$components/resources.md';
 import RodneyLabCredit from '$components/RodneyLabCredit.astro';
+import SEO from '$components/SEO/index.astro';
 import '$styles/fonts.css';
 import '$styles/global.css';
 import getResult from '$utilities/file';
@@ -18,24 +19,20 @@ const results = await Promise.all(methods.map(({file}) => {
 
 const COPYRIGHT_ENTITY = '\u00A9'; // (c)
 
-const title = 'Temporal API Cheatsheet: Quick Guide to new JS API';
-const metadescription ='Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.';
-
+const seoProps = {
+title:'Temporal API Cheatsheet: Quick Guide to new JS API',
+ metadescription:'Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.',
+};
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
-    <meta name="description" content={metadescription} />
-    <meta
-      name="robots"
-      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="192x192" />
     <link rel="mask-icon" href="/favicon.svg" />
+    <SEO {...seoProps} />
   </head>
   <body>
   <header>
@@ -145,6 +142,6 @@ const metadescription ='Temporal API Cheatsheet: a quick guide to new JavaScript
   }
 
   .copyright {
-margin-bottom: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
   }
 </style>

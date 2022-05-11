@@ -15,6 +15,7 @@
     "paths": {
       "$content/*": ["src/content/*"],
       "$components/*": ["src/components/*"],
+      "$configuration/*": ["src/configuration/*"],
       "$styles/*": ["src/styles/*"],
       "$utilities/*": ["src/utilities/*"]
     }
