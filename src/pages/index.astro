@@ -1,8 +1,8 @@
 ---
 import GithubIcon from '$components/Icons/Github.astro';
-import {Content as Introduction} from '$components/introduction.md';
-import {Content as Polyfill} from '$components/polyfill.md';
-import {Content as Resources} from '$components/resources.md';
+import { Content as Introduction } from '$components/introduction.md';
+import { Content as Polyfill } from '$components/polyfill.md';
+import { Content as Resources } from '$components/resources.md';
 import RodneyLabCredit from '$components/RodneyLabCredit.astro';
 import SEO from '$components/SEO/index.astro';
 import '$styles/fonts.css';
@@ -10,9 +10,9 @@ import '$styles/global.css';
 import getResult from '$utilities/file';
 
 
-const methods = (await Astro.glob('../content/*.md')).sort((a,b)=> a.frontmatter.title.localeCompare(b.frontmatter.title));
+const methods = (await Astro.glob('../content/*.md')).sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 
-const results = await Promise.all(methods.map(({file}) => {
+const results = await Promise.all(methods.map(({ file }) => {
   const path = file.replace(/\.md/, '').split('/').at(-1);
   return getResult(path);
 }));
@@ -20,54 +20,61 @@ const results = await Promise.all(methods.map(({file}) => {
 const COPYRIGHT_ENTITY = '\u00A9'; // (c)
 
 const seoProps = {
-title:'Temporal API Cheatsheet: Quick Guide to new JS API',
- metadescription:'Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.',
+  title: 'Temporal API Cheatsheet: Quick Guide to new JS API',
+  metadescription: 'Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.',
 };
 ---
+
 <html lang="en-GB">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="192x192" />
-    <link rel="mask-icon" href="/favicon.svg" />
-    <SEO {...seoProps} />
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="192x192" />
+  <link rel="mask-icon" href="/favicon.svg" />
+  <SEO {...seoProps} />
+</head>
+
+<body>
   <header>
     <nav>
-      <a aria-label="Open Git Hub repo" href="https://github.com/rodneylab/temporal-api-cheatsheet" target="_blank" rel="nofollow noopener noreferrer"><GithubIcon />
+      <a aria-label="Open Git Hub repo" href="https://github.com/rodneylab/temporal-api-cheatsheet" target="_blank"
+        rel="nofollow noopener noreferrer">
+        <GithubIcon />
       </a>
     </nav>
   </header>
   <main class="container">
     <h1 class="heading">JavaScript Temporal API Cheatsheet</h1>
     <div class="content content-emph">
-    <Introduction />
+      <Introduction />
     </div>
     <h2>Polyfill</h2>
     <div class="content">
-    <Polyfill /></div>
+      <Polyfill />
+    </div>
     <section role="feed">
       <h2>Methods</h2>
-        {methods.map(({Content, frontmatter: {docs, title}},index) => (
-          <article class="content example">
-            <h3 id={title} >{title}</h3>
-            <Content />
-            {results[index] ? 
-              <div class="result">
-                {results[index].now ? 
-                  <div>Now: {results[index].now}</div> : null
-                }
-                <div>Result: <strong>{results[index].result}</strong></div>
-              </div>
-              : null
-            }
-            <div class="docs">
-              <strong>Docs</strong>: <a href={docs}>{docs}</a>
-            </div>
-        </article>))}
+      {methods.map(({Content, frontmatter: {docs, title}},index) => (
+      <article class="content example">
+        <h3 id={title}>{title}</h3>
+        <Content />
+        {results[index] ?
+        <div class="result">
+          {results[index].now ?
+          <div>Now: {results[index].now}</div> : null
+          }
+          <div>Result: <strong>{results[index].result}</strong></div>
+        </div>
+        : null
+        }
+        <div class="docs">
+          <strong>Docs</strong>: <a aria-label={`Open T C 39 docs on ${title} method`} href={docs} target="_blank"
+            rel="nofollow noopener noreferrer">{docs}</a>
+        </div>
+      </article>))}
     </section>
     <h2>Resources</h2>
     <div class="content content-emph">
@@ -78,7 +85,8 @@ title:'Temporal API Cheatsheet: Quick Guide to new JS API',
     <div class="copyright">Copyright {COPYRIGHT_ENTITY} 2022 Rodney Johnson.</div>
     <RodneyLabCredit />
   </footer>
-  </body>
+</body>
+
 </html>
 
 <style>
@@ -135,7 +143,8 @@ title:'Temporal API Cheatsheet: Quick Guide to new JS API',
     margin-bottom: var(--spacing-4);
   }
 
-  .docs, .docs a {
+  .docs,
+  .docs a {
     background-color: ;
     color: var(--colour-brand-tint-10);
     margin-bottom: var(--spacing-2);
