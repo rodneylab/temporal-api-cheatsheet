@@ -2,6 +2,8 @@
   "name": "temporal-api-cheatsheet",
   "version": "0.0.1",
   "private": true,
+  "license": "BSD-3-Clause",
+  "description": "Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -26,5 +28,12 @@
     "stylelint": "^14.9.1",
     "stylelint-config-recommended": "^8.0.0",
     "subfont": "^6.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodneylab/temporal-api-cheatsheet"
+  },
+  "bugs": {
+    "url": "https://github.com/rodneylab/temporal-api-cheatsheet/issues"
   }
 }
