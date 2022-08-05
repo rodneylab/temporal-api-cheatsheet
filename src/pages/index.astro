@@ -64,7 +64,7 @@ const seoProps = {
         {results[index] ?
         <div class="result">
           {results[index].now ?
-          <div>Now: {results[index].now}</div> : null
+          <div>Now: {results[index].now.toString()}</div> : null
           }
           <div>Result: <strong>{results[index].result}</strong></div>
         </div>
