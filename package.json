@@ -17,17 +17,17 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.3",
     "@js-temporal/polyfill": "^0.4.2",
-    "astro": "^1.0.0-rc.6",
+    "astro": "^1.0.6",
     "astro-icon": "^0.7.3",
     "commitlint": "^17.0.3",
     "dotenv": "^16.0.1",
     "husky": "^8.0.1",
     "postcss-html": "^1.5.0",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.3.0",
-    "stylelint": "^14.9.1",
-    "stylelint-config-recommended": "^8.0.0",
-    "subfont": "^6.8.0"
+    "prettier-plugin-astro": "^0.5.0",
+    "stylelint": "^14.11.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "subfont": "^6.9.0"
   },
   "repository": {
     "type": "git",
