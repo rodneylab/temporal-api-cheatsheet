@@ -7,6 +7,6 @@ Convenient for taking off arbitrary time periods from given time or date. You mi
 
 ```javascript
 const result = Temporal.Now.plainDateTimeISO()
-  .subtract({ months: 3 })
-  .toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' });
+	.subtract({ months: 3 })
+	.toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' });
 ```

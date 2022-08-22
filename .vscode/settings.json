@@ -1,25 +1,25 @@
 {
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "editor.rulers": [100],
-  "[json]": {
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 100
-  },
-  "[markdown]": {
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 80,
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "strings": "off",
-      "other": "off"
-    }
-  },
-  "spellright.language": ["en_GB"],
-  "spellright.documentTypes": ["markdown"],
-  "spellright.parserByClass": {
-    "mdx": {
-      "parser": "markdown"
-    }
-  }
+	"editor.formatOnSave": true,
+	"editor.tabSize": 2,
+	"editor.rulers": [100],
+	"[json]": {
+		"editor.wordWrap": "bounded",
+		"editor.wordWrapColumn": 100
+	},
+	"[markdown]": {
+		"editor.wordWrap": "bounded",
+		"editor.wordWrapColumn": 80,
+		"editor.quickSuggestions": {
+			"comments": "off",
+			"strings": "off",
+			"other": "off"
+		}
+	},
+	"spellright.language": ["en_GB"],
+	"spellright.documentTypes": ["markdown"],
+	"spellright.parserByClass": {
+		"mdx": {
+			"parser": "markdown"
+		}
+	}
 }

@@ -7,7 +7,7 @@ Useful for checking if something has expired. Returns `-1` if first date is befo
 
 ```javascript
 const result = Temporal.PlainDateTime.compare(
-  Temporal.Now.plainDateTimeISO(),
-  Temporal.PlainDate.from('2022-12-31'),
+	Temporal.Now.plainDateTimeISO(),
+	Temporal.PlainDate.from('2022-12-31'),
 );
 ```

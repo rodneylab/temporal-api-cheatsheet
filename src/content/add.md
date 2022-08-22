@@ -7,6 +7,6 @@ Convenient for adding on an arbitrary time period to a given time or date. You m
 
 ```javascript
 const result = Temporal.Now.plainDateTimeISO()
-  .add({ hours: 2 })
-  .toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' });
+	.add({ hours: 2 })
+	.toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' });
 ```

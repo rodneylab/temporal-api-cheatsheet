@@ -10,31 +10,31 @@ const { metadescription, title } = Astro.props;
 const url = `${siteUrl}`;
 
 const openGraphProps = {
-  alt: title,
-  image: `${siteUrl}assets/temporal-api-cheatsheet-og.png`,
-  squareImage: `${siteUrl}assets/temporal-api-cheatsheet-og-square.png`,
-  metadescription,
-  ogLanguage,
-  pageTitle: title,
-  siteTitle: title,
-  url,
+	alt: title,
+	image: `${siteUrl}assets/temporal-api-cheatsheet-og.png`,
+	squareImage: `${siteUrl}assets/temporal-api-cheatsheet-og-square.png`,
+	metadescription,
+	ogLanguage,
+	pageTitle: title,
+	siteTitle: title,
+	url,
 };
 
 const twitterProps = {
-  author,
-  image: `${siteUrl}assets/temporal-api-cheatsheet-twitter.png`,
-  twitterUsername,
+	author,
+	image: `${siteUrl}assets/temporal-api-cheatsheet-twitter.png`,
+	twitterUsername,
 };
 ---
 
 <head>
-  <title>{title}</title>
-  <meta name="description" content={metadescription} />
-  <meta
-    name="robots"
-    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-  />
-  <link rel="canonical" href={url} />
-  <Twitter {...twitterProps} />
-  <OpenGraph {...openGraphProps} />
+	<title>{title}</title>
+	<meta name="description" content={metadescription} />
+	<meta
+		name="robots"
+		content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+	/>
+	<link rel="canonical" href={url} />
+	<Twitter {...twitterProps} />
+	<OpenGraph {...openGraphProps} />
 </head>

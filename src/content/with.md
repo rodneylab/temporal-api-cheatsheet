@@ -10,7 +10,7 @@ You might want to set the date to a particular day of a month or a particular ti
 
 ```javascript
 const result = Temporal.Now.plainDateTimeISO()
-  .add({ months: 1 })
-  .with({ hour: 23, minute: 59, second: 0 })
-  .toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' });
+	.add({ months: 1 })
+	.with({ hour: 23, minute: 59, second: 0 })
+	.toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' });
 ```
