@@ -1,13 +1,13 @@
 ---
-import GithubIcon from '$components/Icons/Github.astro';
-import { Content as Introduction } from '$components/introduction.md';
-import { Content as Polyfill } from '$components/polyfill.md';
-import { Content as Resources } from '$components/resources.md';
-import RodneyLabCredit from '$components/RodneyLabCredit.astro';
-import SEO from '$components/SEO/index.astro';
-import '$styles/fonts.css';
-import '$styles/global.css';
-import getResult from '$utilities/file';
+import GithubIcon from '~components/Icons/Github.astro';
+import { Content as Introduction } from '~components/introduction.md';
+import { Content as Polyfill } from '~components/polyfill.md';
+import { Content as Resources } from '~components/resources.md';
+import RodneyLabCredit from '~components/RodneyLabCredit.astro';
+import SEO from '~components/SEO/index.astro';
+import '~styles/fonts.css';
+import '~styles/global.css';
+import getResult from '~utilities/file';
 
 const methods = (await Astro.glob('../content/*.md')).sort((a, b) =>
 	a.frontmatter.title.localeCompare(b.frontmatter.title),
