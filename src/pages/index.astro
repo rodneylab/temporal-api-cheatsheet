@@ -16,7 +16,6 @@ const methods = (await Astro.glob('../content/*.md')).sort((a, b) =>
 const results = await Promise.all(
 	methods.map(({ file }) => {
 		const path = file.replace(/\.md/, '').split('/').at(-1);
-
 		if (!path) throw new Error(`Missing TypeScript file matching ${file}`);
 		return getResult(path);
 	}),
