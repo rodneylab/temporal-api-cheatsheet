@@ -12,23 +12,24 @@ const { alt, image, squareImage, metadescription, ogLanguage, pageTitle, siteTit
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content={pageTitle} />
 	<meta property="og:description" content={metadescription} />
-{	image ? (
-		<>
-			<meta property="og:image" content={image} />
-			<meta property="og:image:width" content={OG_IMAGE.WIDTH.toFixed()} />
-			<meta property="og:image:height" content={OG_IMAGE.HEIGHT.toFixed()} />
-			<meta property="og:image:alt" content={alt} />
-		</>
-	) : null
-}
-{
-	squareImage ? (
-		<>
-			<meta property="og:image" content={squareImage} />
-			<meta property="og:image:width" content={OG_SQUARE_IMAGE.HEIGHT.toFixed()} />
-			<meta property="og:image:height" content={OG_SQUARE_IMAGE.HEIGHT.toFixed()} />
-			<meta property="og:image:alt" content={alt} />
-		</>
-	) : null
-}
+	{
+		image ? (
+			<>
+				<meta property="og:image" content={image} />
+				<meta property="og:image:width" content={OG_IMAGE.WIDTH.toFixed()} />
+				<meta property="og:image:height" content={OG_IMAGE.HEIGHT.toFixed()} />
+				<meta property="og:image:alt" content={alt} />
+			</>
+		) : null
+	}
+	{
+		squareImage ? (
+			<>
+				<meta property="og:image" content={squareImage} />
+				<meta property="og:image:width" content={OG_SQUARE_IMAGE.HEIGHT.toFixed()} />
+				<meta property="og:image:height" content={OG_SQUARE_IMAGE.HEIGHT.toFixed()} />
+				<meta property="og:image:alt" content={alt} />
+			</>
+		) : null
+	}
 </head>

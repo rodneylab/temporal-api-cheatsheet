@@ -27,7 +27,7 @@ declare module 'astro:content' {
 		}) => string | Promise<string>;
 	};
 	export function defineCollection<S extends BaseSchema>(
-		input: BaseCollectionConfig<S>
+		input: BaseCollectionConfig<S>,
 	): BaseCollectionConfig<S>;
 
 	type EntryMapKeys = keyof typeof entryMap;
@@ -36,21 +36,21 @@ declare module 'astro:content' {
 
 	export function getEntryBySlug<
 		C extends keyof typeof entryMap,
-		E extends ValidEntrySlug<C> | (string & {})
+		E extends ValidEntrySlug<C> | (string & {}),
 	>(
 		collection: C,
 		// Note that this has to accept a regular string too, for SSR
-		entrySlug: E
+		entrySlug: E,
 	): E extends ValidEntrySlug<C>
 		? Promise<CollectionEntry<C>>
 		: Promise<CollectionEntry<C> | undefined>;
 	export function getCollection<C extends keyof typeof entryMap, E extends CollectionEntry<C>>(
 		collection: C,
-		filter?: (entry: CollectionEntry<C>) => entry is E
+		filter?: (entry: CollectionEntry<C>) => entry is E,
 	): Promise<E[]>;
 	export function getCollection<C extends keyof typeof entryMap>(
 		collection: C,
-		filter?: (entry: CollectionEntry<C>) => unknown
+		filter?: (entry: CollectionEntry<C>) => unknown,
 	): Promise<CollectionEntry<C>[]>;
 
 	type InferEntrySchema<C extends keyof typeof entryMap> = import('astro/zod').infer<
@@ -65,9 +65,7 @@ declare module 'astro:content' {
 		}>;
 	};
 
-	const entryMap: {
-		
-	};
+	const entryMap: {};
 
 	type ContentConfig = never;
 }
