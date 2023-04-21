@@ -1,25 +1,21 @@
 ---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import GithubIcon from '~components/Icons/Github.astro';
+import RodneyLabCredit from '~components/RodneyLabCredit.astro';
+import SEO from '~components/SEO/index.astro';
 import { Content as Introduction } from '~components/introduction.md';
 import { Content as Polyfill } from '~components/polyfill.md';
 import { Content as Resources } from '~components/resources.md';
-import RodneyLabCredit from '~components/RodneyLabCredit.astro';
-import SEO from '~components/SEO/index.astro';
 import '~styles/fonts.css';
 import '~styles/global.css';
 import getResult from '~utilities/file';
 
-const methods = (await Astro.glob('../content/*.md')).sort((a, b) =>
-	a.frontmatter.title.localeCompare(b.frontmatter.title),
+const methods: CollectionEntry<'methods'>[] = (await getCollection('methods')).sort((a, b) =>
+	a.data.title.localeCompare(b.data.title),
 );
 
-const results = await Promise.all(
-	methods.map(({ file }) => {
-		const path = file.replace(/\.md/, '').split('/').at(-1);
-		if (!path) throw new Error(`Missing TypeScript file matching ${file}`);
-		return getResult(path);
-	}),
-);
+const results = await Promise.all(methods.map(({ slug }) => getResult(slug)));
 
 const COPYRIGHT_ENTITY = '\u00A9'; // (c)
 
@@ -66,7 +62,10 @@ const seoProps = {
 			<section role="feed">
 				<h2>Methods</h2>
 				{
-					methods.map(({ Content, frontmatter: { docs, title } }, index) => (
+					methods.map(async ({ render, data: { docs, title } }, index) => {
+						const {Content} = await render();
+
+						return (
 						<article class="content example">
 							<h3 id={title}>{title}</h3>
 							<Content />
@@ -90,7 +89,7 @@ const seoProps = {
 								</a>
 							</div>
 						</article>
-					))
+					)})
 				}
 			</section>
 			<h2>Resources</h2>
