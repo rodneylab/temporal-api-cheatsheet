@@ -1,39 +1,39 @@
 {
-	"name": "temporal-api-cheatsheet",
-	"version": "0.0.1",
-	"private": true,
-	"license": "BSD-3-Clause",
-	"description": "Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro telemetry disable && astro build && subfont -ir --root dist",
-		"preview": "astro preview",
-		"check": "astro check --fail-on-warnings --ignore src/content/blog/**",
-		"format": "prettier --write --plugin-search-dir=. .",
-		"lint:css": "stylelint \"src/**/*.{astro,css,svelte}\"",
-		"prettier:check": "prettier --check --plugin-search-dir=. ."
-	},
-	"devDependencies": {
-		"@commitlint/config-conventional": "^17.6.1",
-		"@js-temporal/polyfill": "^0.4.3",
-		"astro": "^2.3.0",
-		"astro-icon": "^0.8.0",
-		"commitlint": "^17.6.1",
-		"dotenv": "^16.0.3",
-		"husky": "^8.0.3",
-		"postcss-html": "^1.5.0",
-		"prettier": "^2.8.7",
-		"prettier-plugin-astro": "^0.8.0",
-		"stylelint": "^15.5.0",
-		"stylelint-config-recommended": "^12.0.0",
-		"subfont": "^7.1.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/rodneylab/temporal-api-cheatsheet"
-	},
-	"bugs": {
-		"url": "https://github.com/rodneylab/temporal-api-cheatsheet/issues"
-	}
+  "name": "temporal-api-cheatsheet",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "description": "Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro telemetry disable && astro build && subfont -ir --root dist",
+    "preview": "astro preview",
+    "check": "astro check --fail-on-warnings --ignore src/content/blog/**",
+    "format": "prettier --write --plugin-search-dir=. .",
+    "lint:css": "stylelint \"src/**/*.{astro,css,svelte}\"",
+    "prettier:check": "prettier --check --plugin-search-dir=. ."
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.6.6",
+    "@js-temporal/polyfill": "^0.4.4",
+    "astro": "^2.7.3",
+    "astro-icon": "^0.8.1",
+    "commitlint": "^17.6.6",
+    "dotenv": "^16.3.1",
+    "husky": "^8.0.3",
+    "postcss-html": "^1.5.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-astro": "^0.10.0",
+    "stylelint": "^15.9.0",
+    "stylelint-config-recommended": "^12.0.0",
+    "subfont": "^7.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodneylab/temporal-api-cheatsheet"
+  },
+  "bugs": {
+    "url": "https://github.com/rodneylab/temporal-api-cheatsheet/issues"
+  }
 }
