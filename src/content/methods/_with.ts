@@ -5,7 +5,10 @@ const now = Temporal.Now.plainDateTimeISO().toLocaleString('en-GB', {
 	timeStyle: 'long',
 });
 
-const nowString = now.toLocaleString('en-GB', { dateStyle: 'full', timeStyle: 'long' });
+const nowString = now.toLocaleString('en-GB', {
+	dateStyle: 'full',
+	timeStyle: 'long',
+});
 
 const result = Temporal.Now.plainDateTimeISO()
 	.add({ months: 1 })

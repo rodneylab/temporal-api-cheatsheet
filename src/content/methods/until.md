@@ -3,7 +3,8 @@ title: 'until'
 docs: 'https://tc39.es/proposal-temporal/docs/instant.html#until'
 ---
 
-Works out how long the period between two dates is. You might use this when signing a JWT to work out how many seconds from now your expiry date is.
+Works out how long the period between two dates is. You might use this when
+signing a JWT to work out how many seconds from now your expiry date is.
 
 ```javascript
 const now = Temporal.Now.instant();

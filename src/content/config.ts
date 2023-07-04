@@ -1,12 +1,12 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
 
 const methodsCollection = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    docs: z.string().url(),
-  }),
+	schema: z.object({
+		title: z.string(),
+		docs: z.string().url(),
+	}),
 });
 
 export const collections = {
-  methods: methodsCollection,
+	methods: methodsCollection,
 };

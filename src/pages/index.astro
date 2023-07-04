@@ -63,33 +63,34 @@ const seoProps = {
 				<h2>Methods</h2>
 				{
 					methods.map(async ({ render, data: { docs, title } }, index) => {
-						const {Content} = await render();
+						const { Content } = await render();
 
 						return (
-						<article class="content example">
-							<h3 id={title}>{title}</h3>
-							<Content />
-							{results[index] ? (
-								<div class="result">
-									{results[index].now ? <div>Now: {results[index].now.toString()}</div> : null}
-									<div>
-										Result: <strong>{results[index].result}</strong>
+							<article class="content example">
+								<h3 id={title}>{title}</h3>
+								<Content />
+								{results[index] ? (
+									<div class="result">
+										{results[index].now ? <div>Now: {results[index].now.toString()}</div> : null}
+										<div>
+											Result: <strong>{results[index].result}</strong>
+										</div>
 									</div>
+								) : null}
+								<div class="docs">
+									<strong>Docs</strong>:{' '}
+									<a
+										aria-label={`Open T C 39 docs on ${title} method`}
+										href={docs}
+										target="_blank"
+										rel="nofollow noopener noreferrer"
+									>
+										{docs}
+									</a>
 								</div>
-							) : null}
-							<div class="docs">
-								<strong>Docs</strong>:{' '}
-								<a
-									aria-label={`Open T C 39 docs on ${title} method`}
-									href={docs}
-									target="_blank"
-									rel="nofollow noopener noreferrer"
-								>
-									{docs}
-								</a>
-							</div>
-						</article>
-					)})
+							</article>
+						);
+					})
 				}
 			</section>
 			<h2>Resources</h2>
