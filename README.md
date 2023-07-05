@@ -6,16 +6,16 @@
   </a>
 </p>
 <h1 align="center">
-  Temporal API Cheatsheet
+  Temporal API Cheat Sheet
 </h1>
 
 # temporal-api-cheatsheet
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/rodneylab/temporal-api-cheatsheet)
 
-Code for the Temporal API Cheatsheet. See the Rodney Lab
-<a aria-label="Open Rodney Lab blog post on Temporal A P I cheatsheet" href="https://rodneylab.com/temporal-api-cheatsheet/">article
-introducing the Temporal API Cheatsheet</a> for more colour. If you have any
+Code for the Temporal API Cheat Sheet. See the Rodney Lab
+<a href="https://rodneylab.com/temporal-api-cheatsheet/">article
+introducing the Temporal API Cheat Sheet</a> for more colour. If you have any
 questions, please drop a comment at the bottom of that page. Feel free to submit
 a pull request for missing methods which you find handy.
 
