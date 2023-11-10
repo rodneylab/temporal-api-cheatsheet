@@ -6,6 +6,6 @@
 	"container": {
 		"port": 4321,
 		"startScript": "start",
-		"node": "14"
+		"node": "20"
 	}
 }
