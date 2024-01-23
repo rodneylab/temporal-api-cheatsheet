@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"license": "BSD-3-Clause",
-	"description": "Temporal API Cheatsheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.",
+	"description": "Temporal API Cheat Sheet: a quick guide to new JavaScript Temporal API including code snippets and example use cases.",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -15,21 +15,21 @@
 		"prettier:check": "prettier --check --plugin=prettier-plugin-astro ."
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.3.1",
-		"@commitlint/config-conventional": "^18.4.0",
+		"@astrojs/check": "^0.4.1",
+		"@commitlint/config-conventional": "^18.5.0",
 		"@js-temporal/polyfill": "^0.4.4",
-		"astro": "^3.5.0",
-		"astro-icon": "^0.8.1",
-		"commitlint": "^18.4.0",
-		"dotenv": "^16.3.1",
+		"astro": "^4.2.3",
+		"commitlint": "^18.5.0",
+		"dotenv": "^16.3.2",
 		"husky": "^8.0.3",
-		"postcss-html": "^1.5.0",
-		"prettier": "^3.0.3",
-		"prettier-plugin-astro": "^0.12.1",
-		"stylelint": "^15.11.0",
-		"stylelint-config-recommended": "^13.0.0",
+		"postcss-html": "^1.6.0",
+		"prettier": "^3.2.4",
+		"prettier-plugin-astro": "^0.13.0",
+		"stylelint": "^16.2.0",
+		"stylelint-config-recommended": "^14.0.0",
 		"subfont": "^7.1.1",
-		"typescript": "^5.2.2"
+		"typescript": "^5.3.3",
+		"vite-node": "^1.2.1"
 	},
 	"repository": {
 		"type": "git",

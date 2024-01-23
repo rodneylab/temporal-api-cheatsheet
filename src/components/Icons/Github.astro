@@ -1,5 +1,12 @@
----
-import { Icon } from 'astro-icon';
----
+<div class="logo">
+	<svg role="img" width={48} height={48} viewBox="0 0 24 24" fill="none">
+		<use href="/sprite.svg#github"></use>
+	</svg>
+</div>
 
-<Icon name="simple-icons:github" size={48} />
+<style>
+	.logo {
+		display: flex;
+		align-items: center;
+	}
+</style>
